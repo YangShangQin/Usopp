@@ -40,6 +40,6 @@ dependencies {
     provided ('com.google.android:android:2.1.2')
     compile 'com.google.auto.service:auto-service:1.0-rc2'
 }
-apply from: 'mvn.gradle'
+//apply from: 'mvn.gradle'
 
-//apply from: 'https://raw.githubusercontent.com/HomHomLin/GradlePublishing/master/android.gradle'
+apply from: 'https://raw.githubusercontent.com/HomHomLin/GradlePublishing/master/p.gradle'
