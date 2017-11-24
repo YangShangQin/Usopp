@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         /*List<String> list = new ArrayList<>();
-        list.add("ModuleInit");
+        list.add("ModuleOneInit");
         list.add("ModuleCommunity");
         UsoppCompiler.getInstance().init(list);
         UsoppCompiler.getInstance().fireApplication();*/

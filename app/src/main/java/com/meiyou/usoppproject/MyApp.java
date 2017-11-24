@@ -19,8 +19,8 @@ public class MyApp extends Application {
         super.onCreate();
 
         List<String> list = new ArrayList<>();
-        list.add("ModuleInit");
-        list.add("ModuleCommunity");
+        list.add("ModuleOneInit");
+        list.add("ModuleTwoInit");
         Usopp.getInstance().init(this,list);
 
         //Usopp.getInstance().getWatcherManager().addIgnoreActivity(MainActivity.class.getName());

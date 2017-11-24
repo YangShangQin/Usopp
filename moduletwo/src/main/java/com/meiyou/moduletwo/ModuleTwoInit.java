@@ -1,46 +1,36 @@
-package com.meiyou.moduleone;
+package com.meiyou.moduletwo;
+
+import android.util.Log;
 
 import com.meiyou.usopp.annotations.Activity;
 import com.meiyou.usopp.annotations.AppApplication;
 import com.meiyou.usopp.annotations.AppBackground;
 import com.meiyou.usopp.annotations.AppForground;
+import com.meiyou.usopp.annotations.Thread;
 import com.meiyou.usopp.annotations.Usopp;
 
 /**
- *
- * Author: meetyou
- * Date: 17/8/16 15:49.
+ * Author: ice
+ * Date: 17/11/24 11:49.
  */
-@Usopp("ModuleInit")//标记此类为Usopp识别类
-public class ModuleInit {
+@Usopp("ModuleTwoInit")//标记此类为Usopp识别类
+public class ModuleTwoInit {
 
-
+    private static final String TAG="ModuleTwoInit";
 
     /**
      * App在Application UI线程初始化
      */
     @AppApplication
-    public void init(){
-        try {
-            Thread.sleep(58);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void runAtApplication(){
+        Log.d(TAG,"runAtApplication");
     }
-
-    /**
-     * App在Application 线程初始化
-     */
 
     @AppApplication
-    public void init2(){
-        try {
-            Thread.sleep(33);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    @Thread
+    public void runAtApplicationAtThread(){
+        Log.d(TAG,"runAtApplicationAtThread");
     }
-
 
     /**
      * App退到后台
@@ -48,8 +38,8 @@ public class ModuleInit {
      * 这里也可以加 @Thread来进行线程处理
      */
     @AppBackground
-    public void init22(){
-
+    public void runWhenAppBackground(){
+        Log.d(TAG,"runWhenAppBackground");
     }
 
     /**
@@ -58,8 +48,8 @@ public class ModuleInit {
      * 这里也可以加 @Thread来进行线程处理
      */
     @AppForground
-    public void init23(){
-
+    public void runWhenAppBacktoFront(){
+        Log.d(TAG,"runWhenAppBacktoFront");
     }
 
     /**
@@ -67,7 +57,7 @@ public class ModuleInit {
      * 这里也可以加 @Thread来进行线程处理
      */
     @Activity("com.meiyou.usoppproject.MainActivity")
-    public void init233(){
-
+    public void runWhenAppStartMainActivity(){
+        Log.d(TAG,"runWhenAppStartMainActivity");
     }
 }

@@ -1,1 +1,1 @@
-include ':app', ':usoppcompiler', ':usopp', ':moduleone'
+include ':app', ':usoppcompiler', ':usopp', ':moduleone', ':moduletwo'
