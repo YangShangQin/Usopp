@@ -26,10 +26,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Author: lwh
+ * Author: meetyou
  * Date: 17/8/16 14:44.
  * <p>
- * Usopp 启动流程：
+ * UsoppCompiler 启动流程：
  * <p>
  * Appcliation
  * <p>
@@ -38,15 +38,15 @@ import java.util.Map;
  * on
  */
 
-public class Usopp {
-    private static final String TAG = "Usopp";
-    private static Usopp instance;
+public class UsoppCompiler {
+    private static final String TAG = "UsoppCompiler";
+    private static UsoppCompiler instance;
 
-    public static Usopp getInstance() {
+    public static UsoppCompiler getInstance() {
         if (instance == null) {
-            synchronized (Usopp.class) {
+            synchronized (UsoppCompiler.class) {
                 if (instance == null)
-                    instance = new Usopp();
+                    instance = new UsoppCompiler();
             }
         }
         return instance;
@@ -80,7 +80,7 @@ public class Usopp {
                     map.putAll(tempMap);
                 }
             }catch (Exception ex){
-                System.out.println("Usopp no default imp");
+                System.out.println("UsoppCompiler no default imp");
                 //ex.printStackTrace();
             }
             if(listModulePackagerName!=null && listModulePackagerName.size()>0){
@@ -124,9 +124,7 @@ public class Usopp {
                                 }
                                 if (annation instanceof FrameworkApplication) {
                                     usoppData.setFrameworkApplication(true);
-                                } /*else if (annation instanceof Launcher) {
-                                    usoppData.setLauncher(((Launcher) annation).value());
-                                } */ else if (annation instanceof Activity) {
+                                } else if (annation instanceof Activity) {
                                     usoppData.setActivity(((Activity) annation).value());
                                 }  else if (annation instanceof AppForground) {
                                     usoppData.setAppForground(true);
@@ -151,10 +149,10 @@ public class Usopp {
 
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
-            //Log.e(TAG, "Usopp catch classnofind,maybe no body use Usopp");
+            //Log.e(TAG, "UsoppCompiler catch classnofind,maybe no body use UsoppCompiler");
         }
         long timeEnd = System.currentTimeMillis();
-        Log.d(TAG, "Usopp init cost time:" + (timeEnd - time));
+        Log.d(TAG, "UsoppCompiler init cost time:" + (timeEnd - time));
 
     }
 

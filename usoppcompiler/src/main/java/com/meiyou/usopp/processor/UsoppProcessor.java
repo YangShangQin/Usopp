@@ -47,7 +47,7 @@ public class UsoppProcessor extends AbstractProcessor {
 
         Map<String, ElementHolder> map = collectClassInfo(roundEnv, com.meiyou.usopp.annotations.Usopp.class, ElementKind.CLASS);
         if (map.size() == 0) {
-            System.out.println("find Usopp Annatotion size 0");
+            System.out.println("find UsoppCompiler Annatotion size 0");
         }
         try {
             //把包名当成文件名，用来规避编译时类重复的问题
@@ -96,7 +96,7 @@ public class UsoppProcessor extends AbstractProcessor {
             }*/
 
             map.put(annotationName+index, new ElementHolder(typeElement, annotationName, clazzName, simpleName));
-            System.out.println("Usopp get Annotation from Class :" + clazzName);
+            System.out.println("UsoppCompiler get Annotation from Class :" + clazzName);
             modulePackagerName = annotationName;
             index++;
 

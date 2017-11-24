@@ -9,7 +9,7 @@ import com.meiyou.usopp.annotations.Thread;
 import com.meiyou.usopp.annotations.Usopp;
 
 /**
- * Author: lwh
+ * Author: meetyou
  * Date: 17/8/16 16:21.
  */
 @Usopp("ModuleCommunity")

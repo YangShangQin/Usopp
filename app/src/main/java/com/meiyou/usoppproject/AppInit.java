@@ -9,7 +9,7 @@ import com.meiyou.usopp.annotations.Usopp;
 
 /**
  *
- * Author: lwh
+ * Author: meetyou
  * Date: 17/8/16 15:49.
  */
 @Usopp("ModuleCommunity")//标记此类为Usopp识别类

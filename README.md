@@ -86,7 +86,7 @@ import com.meiyou.usopp.annotations.Usopp;
 
 /**
  *
- * Author: lwh
+ * Author: meetyou
  * Date: 17/8/16 15:49.
  */
 @Usopp("com.lingan.seeyou")//内容请填写本模块包名
@@ -177,7 +177,7 @@ import com.meiyou.usopp.annotations.Thread;
 import com.meiyou.usopp.annotations.Usopp;
 
 /**
- * Author: lwh
+ * Author: meetyou
  * Date: 17/8/16 16:21.
  */
 @Usopp("com.lingan.community")//内容请填写本模块包名
