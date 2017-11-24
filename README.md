@@ -5,6 +5,7 @@
 
 Usopp：一个app初始化框架，集成仅需一行代码。
 
+[项目地址](https://github.com/iceAnson/Usopp)
 
 ```java
 Usopp.getInstance().init(this,list);
