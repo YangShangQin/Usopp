@@ -42,4 +42,4 @@ dependencies {
 }
 //apply from: 'mvn.gradle'
 
-apply from: 'https://raw.githubusercontent.com/HomHomLin/GradlePublishing/master/p.gradle'
+apply from: 'p.gradle'
