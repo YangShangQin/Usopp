@@ -32,3 +32,4 @@ dependencies {
     })*/
 
 }
+apply from: 'https://raw.githubusercontent.com/HomHomLin/GradlePublishing/master/android.gradle'
