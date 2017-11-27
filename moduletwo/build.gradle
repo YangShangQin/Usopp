@@ -23,6 +23,9 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile project(":usoppcompiler")
+    //compile project(":usoppcompiler")
+
+    //compile "com.meiyou:usopp:${DEPLOY_VERSION}"
+    compile "com.meiyou:usoppcompiler:${DEPLOY_VERSION}"
 }
 
