@@ -29,7 +29,7 @@ Usopp.getInstance().init(this,list);
 
 #### 1、在app build.gradle里加入
 ```java
-compile "com.meiyou:usopp:1.0.3"
+compile "com.meiyou:usopp:2.0.1"
 ```
 
 #### 2、在app application的onCreate加入
@@ -48,7 +48,7 @@ Usopp.getInstance().init(this,list);
 
 #### 1、在module内的build.gradle里加入
 ```java
-	compile "com.meiyou:usopp:1.0.3"
+	compile "com.meiyou:usoppcompiler:2.0.1"
 ```
 
 #### 2、创建一个任意类，加入Usopp注解，并加入混淆keep,如下，可直接阅读第二段注释
@@ -211,6 +211,10 @@ public class ModuleOneInit {
 针对不同情况，在测试阶段进行警告
 
 2、参照Usopp的思路，其实activity可以完全按照此种模式拆分为各个业务的集合体，但目前尚未支持，欢迎广大开发者提PR。
+
+
+
+## [License Apache-2.0](LICENSE)
 
 
 
