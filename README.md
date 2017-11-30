@@ -3,26 +3,26 @@
 
 ## 介绍
 
-Usopp：一个app初始化框架，集成仅需一行代码。
-
 [项目地址](https://github.com/iceAnson/Usopp)
 
-```java
-Usopp.getInstance().init(this,list);
-```
+Usopp 是一个基于“模块化”开发模式的初始化框架。使用Usopp以后，“模块”的初始化代码无需在主app编写，
+甚至可以在主app的运行流程中插入自己的代码，实现完全解耦。
 
-集成之后，独立模块可以完全无入侵的请款下，对app的：
+## 特点
 
-	Application
+-	基于编译时注解，运行效率高
+- 	独立模块对主app完全无入侵
+-  主app集成仅需一行代码
+-  使用@Thread取代new Thread或者线程池，统一初始化线程，避免各个模块自己开线程初始化，节省开销
+-  使用@FrameworkAppcaliton ，@AppApplication，@ModuleApplication三个优先级来分别满足底层架构，app，和独立模块之间的运行流程顺序
+-  使用@Activity提供给独立模块代码插入时机
+-  使用@ AppForground和@ AppBackground来提供前后台事件的代码插入时机
+-	可对整个app初始化流程进行监控，如方法耗时，并以此进行优化，梳理启动业务流程
 
-	Activity
 
-	触发前后台
 
-等阶段插入执行代码，主app完全无感知，
-适用于模块化开发模式的项目。
 
-## Usage
+## 集成
 
 
 ### 一、主app
@@ -134,7 +134,7 @@ public class ModuleOneInit {
 
 至此，子模块集成结束，接下来看下运行成功	
 
-### 三、Demo演示
+## Demo演示
 
 
 #### 1、运行app，在logcat搜索“Module”字符串即可看到如下日志：
@@ -166,7 +166,7 @@ public class ModuleOneInit {
 
 其中我们新增了个api进行方法统计耗时，只要用于帮助启动耗时的分布分析。
 
-### 四、Know More
+## 框架背景
 
 #### 1、为什么想写这个东西，它解决哪些痛点？
 	
