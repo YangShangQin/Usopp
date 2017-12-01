@@ -93,7 +93,7 @@ public class UsoppCompiler {
                             map.putAll(tempMap);
                         }
                     }catch (Exception ex){
-                        ex.printStackTrace();
+                        //ex.printStackTrace();
                     }
                 }
             }
